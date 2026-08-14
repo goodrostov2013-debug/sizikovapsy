@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="18" fill="#FBF6EE"/>
+  <path d="M9 43C18 19 37 10 55 12C49 29 36 44 9 43Z" fill="#DCE5DE"/>
+  <path d="M18 48C27 30 39 20 52 15" fill="none" stroke="#B58F61" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="20" y="42" fill="#2E4038" font-family="Georgia,serif" font-size="31">И</text>
+</svg>
