@@ -69,8 +69,8 @@
   #is-site .is-dark h2,#is-site .is-dark h3 { color:#fff; }
   #is-site .is-eyebrow {
     display:inline-flex;align-items:center;gap:10px;
-    color:var(--navy);font-size:12px;font-weight:700;
-    letter-spacing:.14em;text-transform:uppercase;
+    color:#2E4038;font-size:15px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
   }
   #is-site .is-eyebrow:before { content:""; width:26px;height:1px;background:var(--gold); }
   #is-site .is-lead { font-size:clamp(19px,2.1vw,24px);line-height:1.55;color:#505157; }
@@ -110,10 +110,10 @@
   }
   #is-site .is-topin { display:flex;align-items:center;justify-content:space-between;gap:25px; }
   #is-site .is-brand { text-decoration:none;display:flex;flex-direction:column;line-height:1.15; }
-  #is-site .is-brand strong { font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:21px;color:var(--navy2); }
-  #is-site .is-brand span { margin-top:4px;color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase; }
+  #is-site .is-brand strong { font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:28px;color:var(--navy2); }
+  #is-site .is-brand span { margin-top:5px;color:#46544D;font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase; }
   #is-site .is-nav { display:flex;align-items:center;gap:24px; }
-  #is-site .is-nav>a:not(.is-btn) { text-decoration:none;font-size:13px;color:#57585E; }
+  #is-site .is-nav>a:not(.is-btn) { text-decoration:none;font-size:15px;font-weight:600;color:#39443E; }
   #is-site .is-hero-grid {
     position:relative;z-index:2;
     display:grid;grid-template-columns:1.06fr .94fr;gap:62px;align-items:center;
@@ -464,8 +464,8 @@
     border:1px solid rgba(181,143,97,.52);border-radius:60% 40% 56% 44%;transform:rotate(-12deg);
   }
   #is-site .is-principle-kicker {
-    position:relative;z-index:2;margin-bottom:auto;color:var(--sage-deep);font-size:12px;font-weight:700;
-    letter-spacing:.14em;text-transform:uppercase;
+    position:relative;z-index:2;margin-bottom:auto;color:#354F43;font-size:15px;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;
   }
   #is-site .is-principle-line { position:relative;z-index:2;width:72px;height:1px;margin-bottom:24px;background:var(--gold); }
   #is-site .is-quote { font-size:clamp(31px,3.5vw,48px);line-height:1.14;color:var(--ink); }
@@ -495,6 +495,8 @@
   #is-site .is-format p { max-width:470px;color:#606961;font-size:15px;line-height:1.58; }
   #is-site .is-meta { margin-top:auto;padding-top:25px;border-top:1px solid rgba(46,64,56,.13);color:#4D6559;font-size:12px; }
   #is-site #is-requests { background:linear-gradient(180deg,#F0F4F0 0%,#F8F4ED 100%); }
+  #is-site #is-requests .is-card p { color:#25352E;font-size:17px;font-weight:600;line-height:1.55; }
+  #is-site #is-requests .is-num { color:#526A5F;font-size:14px;font-weight:700; }
   #is-site .is-process-section { background:linear-gradient(180deg,#F8F4ED 0%,#FFFDF8 100%); }
   #is-site .is-process .is-step { border-top:1px solid rgba(181,143,97,.45); }
   #is-site .is-lav { background:linear-gradient(145deg,#E7EFE9 0%,#F3E2DA 100%); }
@@ -511,6 +513,44 @@
     #is-site .is-format { min-height:0;padding:27px 24px; }
     #is-site .is-format-no { margin-bottom:22px; }
     #is-site .is-review { padding:27px; }
+  }
+
+  /* Simplified opening sequence */
+  #is-site .is-hero { min-height:auto;padding:112px 0 72px; }
+  #is-site .is-hero-grid {
+    display:grid;grid-template-columns:minmax(0,1.1fr) minmax(340px,.72fr);
+    gap:68px;align-items:center;
+  }
+  #is-site .is-hero-copy h1 {
+    max-width:780px;margin:0;color:var(--ink);
+    font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,5.4vw,76px);
+    font-weight:400;line-height:1.08;letter-spacing:-.035em;
+  }
+  #is-site .is-hero-copy .is-actions { margin-top:34px; }
+  #is-site .is-hero-visual { width:min(100%,520px);justify-self:end; }
+  #is-site .is-hero-visual .is-portrait {
+    min-height:0;aspect-ratio:2 / 3;overflow:hidden;border-radius:28px;
+    box-shadow:var(--shadow);background:#E8E1D7;
+  }
+  #is-site .is-hero-visual .is-portrait img {
+    position:static;display:block;width:100%;height:100%;object-fit:cover;object-position:center top;
+  }
+  #is-site .is-hero-visual .is-note {
+    margin:20px 0 0;padding:0 4px;max-width:none;color:#394840;font-size:16px;line-height:1.6;
+  }
+  #is-site .is-about-heading { margin-bottom:28px; }
+  @media(max-width:1000px){
+    #is-site .is-hero-grid { grid-template-columns:1fr;gap:42px; }
+    #is-site .is-hero-visual { justify-self:start;width:min(100%,560px); }
+  }
+  @media(max-width:700px){
+    #is-site .is-hero { padding:112px 0 56px; }
+    #is-site .is-hero-grid { display:grid;gap:32px; }
+    #is-site .is-hero-copy h1 { font-size:clamp(39px,12vw,54px);line-height:1.1; }
+    #is-site .is-hero-copy .is-actions { margin-top:28px; }
+    #is-site .is-hero-visual { width:100%; }
+    #is-site .is-hero-visual .is-note { font-size:16px; }
+    #is-site .is-about-heading { margin-bottom:22px; }
   }
 </style>
 
@@ -531,43 +571,35 @@
       </div>
     </div>
 
-    <div class="is-wrap is-banner-wrap">
-      <h1 class="is-sr-only">Ирина Сизикова — психолог в Москве и онлайн</h1>
-      <img class="is-hero-banner" src="assets/irina-banner.png" alt="Ирина Сизикова — психолог, Москва и онлайн">
-      <div class="is-banner-bar">
-        <p>Индивидуальные психологические консультации</p>
+    <div class="is-wrap is-hero-grid">
+      <div class="is-hero-copy">
+        <h1>Новое качество жизни начинается с честного разговора с собой</h1>
         <div class="is-actions">
-          <a class="is-btn is-btn--main" href="https://t.me/Kvintrinka">Записаться / задать вопрос</a>
+          <a class="is-btn is-btn--main" href="https://max.ru/u/f9LHodD0cOIGhzhjhLQo6xmwjd6F123lOWvMIeEER5a993F7G7AcQYxxHEw">Записаться / задать вопрос</a>
           <a class="is-phone-link" href="tel:+79165027507">+7 916 502-75-07</a>
         </div>
       </div>
-    </div>
-
-    <div class="is-wrap is-hero-grid is-mobile-hero">
-      <div class="is-hero-copy">
-        <div class="is-eyebrow">Онлайн и очно в Москве</div>
-        <h1>Новое качество жизни <span>начинается с честного разговора с собой</span></h1>
-        <p class="is-lead">Я помогаю не просто справиться с отдельной проблемой, а разобраться, что стоит за ней, вернуть контакт с собой и найти внутреннюю опору для изменений.</p>
+      <div class="is-hero-visual">
+        <div class="is-portrait">
+          <img src="assets/irina-portrait.png" alt="Ирина Сизикова, психолог в Москве">
+        </div>
         <div class="is-note"><span class="is-dot"></span><span>Можно прийти без идеально сформулированного запроса. Иногда достаточно понимать: «я больше не хочу жить так, как живу сейчас».</span></div>
-      </div>
-
-      <div class="is-portrait">
-        <img src="assets/irina-portrait.png" alt="Ирина Сизикова, психолог в Москве">
-        <div class="is-float"><b>Ирина Сизикова</b><p>Психолог. Индивидуальная работа, отношения, родительские запросы и длительное психологическое сопровождение.</p></div>
       </div>
     </div>
   </section>
 
 <section class="is-section" id="is-about">
-    <div class="is-wrap is-about">
-      <div class="is-aboutpic"><img src="assets/irina-about.png" alt="Психолог Ирина Сизикова"></div>
-      <div class="is-aboutcopy">
-        <div class="is-eyebrow">Обо мне</div>
-        <h2>Меня зовут Ирина Сизикова</h2>
-        <p class="is-lead">Я психолог, живу и работаю в Москве.</p>
-        <p>Психология — моё первое образование. Это не профессия, в которую я пришла случайно или после короткого обучения. Она сопровождает меня всю взрослую жизнь.</p>
-        <p>Я продолжаю учиться, расширять знания и совершенствоваться в профессии.</p>
-        <div class="is-mom"><strong>Я ещё и мама троих детей.</strong><br>Я знаю, что можно очень любить своих детей и одновременно уставать; хотеть быть хорошей мамой и сомневаться в себе. Поэтому в кабинете для меня нет задачи оценивать, насколько «правильно» человек справляется со своей жизнью. Мне важнее понять, что с ним происходит.</div>
+    <div class="is-wrap">
+      <div class="is-eyebrow is-about-heading">Обо мне</div>
+      <div class="is-about">
+        <div class="is-aboutpic"><img src="assets/irina-about.png" alt="Психолог Ирина Сизикова"></div>
+        <div class="is-aboutcopy">
+          <h2>Меня зовут Ирина Сизикова</h2>
+          <p class="is-lead">Я психолог, живу и работаю в Москве.</p>
+          <p>Психология — моё первое образование. Это не профессия, в которую я пришла случайно или после короткого обучения. Она сопровождает меня всю взрослую жизнь.</p>
+          <p>Я продолжаю учиться, расширять знания и совершенствоваться в профессии.</p>
+          <div class="is-mom"><strong>Я ещё и мама троих детей.</strong><br>Я знаю, что можно очень любить своих детей и одновременно уставать; хотеть быть хорошей мамой и сомневаться в себе. Поэтому в кабинете для меня нет задачи оценивать, насколько «правильно» человек справляется со своей жизнью. Мне важнее понять, что с ним происходит.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -662,22 +694,22 @@
       <h2>Возможно, сейчас самое время начать с одного честного разговора</h2>
       <p class="is-lead">Не обязательно ждать момента, когда станет совсем тяжело. Иногда достаточно признать: я хочу другого качества своей жизни.</p>
       <div class="is-actions">
-        <a class="is-btn is-btn--main" href="https://t.me/Kvintrinka">Записаться / задать вопрос</a>
+        <a class="is-btn is-btn--main" href="https://max.ru/u/f9LHodD0cOIGhzhjhLQo6xmwjd6F123lOWvMIeEER5a993F7G7AcQYxxHEw">Записаться / задать вопрос</a>
         <a class="is-phone-link" href="tel:+79165027507">+7 916 502-75-07</a>
       </div>
-      <div class="is-contact">Москва • онлайн и очно • <a href="https://t.me/Kvintrinka">написать сообщение</a></div>
+      <div class="is-contact">Москва • онлайн и очно • <a href="https://max.ru/u/f9LHodD0cOIGhzhjhLQo6xmwjd6F123lOWvMIeEER5a993F7G7AcQYxxHEw">написать сообщение</a></div>
     </div>
   </section>
 
   <footer class="is-footer">
     <div class="is-wrap is-footgrid">
       <div><strong>Ирина Сизикова</strong><div>Психолог • Москва • онлайн и очно</div><div class="is-owner">Владелец сайта: Сизикова Ирина Викторовна<br>Самозанятая — плательщик налога на профессиональный доход<br>ИНН 312326389260</div></div>
-      <div class="is-legal">Психологическая консультация не заменяет медицинскую или психиатрическую помощь в ситуациях, когда она необходима.<br><br><a href="https://t.me/Kvintrinka">Написать сообщение</a> · <a href="tel:+79165027507">+7 916 502-75-07</a></div>
+      <div class="is-legal">Психологическая консультация не заменяет медицинскую или психиатрическую помощь в ситуациях, когда она необходима.<br><br><a href="https://max.ru/u/f9LHodD0cOIGhzhjhLQo6xmwjd6F123lOWvMIeEER5a993F7G7AcQYxxHEw">Написать сообщение</a> · <a href="tel:+79165027507">+7 916 502-75-07</a></div>
     </div>
   </footer>
 
   <div class="is-mobilebar">
-    <a class="is-btn is-btn--main" href="https://t.me/Kvintrinka">Задать вопрос</a>
+    <a class="is-btn is-btn--main" href="https://max.ru/u/f9LHodD0cOIGhzhjhLQo6xmwjd6F123lOWvMIeEER5a993F7G7AcQYxxHEw">Задать вопрос</a>
     <a class="is-btn is-btn--light" href="tel:+79165027507">Позвонить</a>
   </div>
 </div>
